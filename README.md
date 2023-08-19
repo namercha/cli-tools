@@ -32,6 +32,7 @@ $ add 10 20 30 -vv
 
 ### authenticate.py
 ```
+
 $ authenticate    
 Username: Nabil
 Password: 
@@ -40,4 +41,23 @@ Error: The two entered values do not match.
 Password: 
 Repeat for confirmation: 
 Logging in Nabil
+```
+
+### fileutils.py
+
+```
+$ note ./notes.txt
+Enter lines of text below and CTRL + C to exit.
+> This is the first line I have entered.
+> There are more lines I can type.
+> The output should show up in a new file called notes.txt
+> ^C
+output written to file ./notes.txt
+```
+
+```
+$ concat file1.txt file2.txt file3.txt combined.txt
+file1.txt written to combined.txt
+file2.txt written to combined.txt
+file3.txt written to combined.txt
 ```

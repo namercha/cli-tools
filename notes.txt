@@ -1,0 +1,3 @@
+This is the first line I have entered.
+There are more lines I can type.
+The output should show up in a new file called notes.txt
