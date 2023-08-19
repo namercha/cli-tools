@@ -61,3 +61,21 @@ file1.txt written to combined.txt
 file2.txt written to combined.txt
 file3.txt written to combined.txt
 ```
+
+### notes.py
+
+```
+$ notes --help
+Usage: notes [OPTIONS] COMMAND [ARGS]...
+
+  Program for managing notes.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  add     Adds note to notes database.
+  delete  Deletes note in notes database.
+  show    Shows notes in notes database.
+  update  Updates note in notes database.
+```

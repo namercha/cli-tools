@@ -7,7 +7,8 @@ setup(
         'greeter',
         'calculator',
         'authenticate',
-        'fileutils'
+        'fileutils',
+        'notes'
     ],
     install_requires=[
         'Click',
@@ -19,7 +20,8 @@ setup(
             'subtract=calculator:subtract',
             'authenticate=authenticate:auth',
             'note=fileutils:note',
-            'concat=fileutils:concat'
+            'concat=fileutils:concat',
+            'notes=notes:main'
         ]
     }
 )
