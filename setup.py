@@ -12,6 +12,7 @@ setup(
     ],
     install_requires=[
         'Click',
+        'requests'
     ],
     entry_points={
         'console_scripts': [
@@ -21,7 +22,8 @@ setup(
             'authenticate=authenticate:auth',
             'note=fileutils:note',
             'concat=fileutils:concat',
-            'notes=notes:main'
+            'notes=notes:main',
+            'download=fileutils:download'
         ]
     }
 )

@@ -79,3 +79,9 @@ Commands:
   show    Shows notes in notes database.
   update  Updates note in notes database.
 ```
+
+### fileutils.download()
+```
+$ download https://www.gutenberg.org/files/2701/2701-0.txt,MobyDick.txt https://www.gutenberg.org/cache/epub/2641/pg2641.txt,ARoomWithAView.txt
+  [####################################]  100%
+```

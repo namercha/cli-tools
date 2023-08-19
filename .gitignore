@@ -1,3 +1,5 @@
-venv
-*.egg-info
 __pycache__
+*.notes
+venv
+*.txt
+cli_tools.egg_info

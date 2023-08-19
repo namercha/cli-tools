@@ -1,4 +1,5 @@
 import click
+import requests
 import typing
 
 @click.command()
@@ -22,3 +23,30 @@ def concat(inputs: typing.Collection[typing.IO], output: typing.IO):
         for line in f:
             output.write(line)
         click.echo(f'{f.name} written to {output.name}')
+
+
+@click.command()
+@click.argument('inputs', nargs=-1)
+def download(inputs):
+    """
+    Downloads web resources from (URL, filename) input pairs.
+    
+    Example:
+        download http://xyz.com/p1.txt, http://xyz.com/p2.txt
+
+    This fetches web resources by URL and saves them locally to filename.
+    """
+
+    with click.progressbar(
+        length=len(inputs),
+        show_eta=False,
+        item_show_func=lambda fname: f"Downloading {fname}"
+    ) as bar:
+        for i, item in enumerate(inputs, start=1):
+            url, file_name = item.split(',')
+            response = requests.get(url)
+            with open(file_name, 'w') as fo:
+                fo.write(response.text)
+            bar.update(i, file_name)
+    
+    click.echo("Download complete.")
